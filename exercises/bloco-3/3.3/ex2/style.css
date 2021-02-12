@@ -7,13 +7,13 @@ img {
 }
 .goomba{
     margin-top: 275px;
-   
 }
 .word {
    position: absolute;
-   bottom: 225px;
-   left: 225px;
+   bottom: 250px;
+   left: 550px;
 }
 .baloon {
-    margin-bottom: 150px;
+    margin-bottom: 175px;
+    margin-left: 325px;
 }
