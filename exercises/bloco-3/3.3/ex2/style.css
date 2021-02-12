@@ -6,11 +6,14 @@ img {
     position: absolute;
 }
 .goomba{
-    margin-top: 300px;
+    margin-top: 275px;
    
 }
 .word {
    position: absolute;
-   bottom: 50px;
+   bottom: 225px;
    left: 225px;
+}
+.baloon {
+    margin-bottom: 150px;
 }
