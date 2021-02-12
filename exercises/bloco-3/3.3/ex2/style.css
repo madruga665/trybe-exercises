@@ -9,3 +9,8 @@ img {
     margin-top: 300px;
    
 }
+.word {
+   position: absolute;
+   bottom: 50px;
+   left: 225px;
+}
