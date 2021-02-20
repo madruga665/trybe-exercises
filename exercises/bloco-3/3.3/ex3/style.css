@@ -1,8 +1,12 @@
 h1, p {
     text-align: center;
 }
-
+li {
+    cursor: pointer;
+}
 li:hover {
     background-color: brown;
-
+}
+li:active {
+    font-family: monospace;
 }
