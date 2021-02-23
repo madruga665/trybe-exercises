@@ -37,6 +37,7 @@ article {
 }
 article h3 {
     color: var(--cor-1);
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 .informções-gerais {
