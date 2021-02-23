@@ -30,29 +30,39 @@ header {
     margin: 50px;
 }
 article {
-    background-color: var(--cor-3);
-    padding: 25px;
+    background: linear-gradient(to right, #e9c46a, #f4a261);
+    padding: 25px 50px;
     margin-left: 150px;
     margin-right: 150px;
 }
 article h3 {
-    color: var(--cor-1);
+    color: var(--cor-2);
     margin-top: 20px;
     margin-bottom: 20px;
+}
+p {
+    line-height: 25px;
+}
+img {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    border-radius: 10px;
 }
 .informções-gerais {
     margin-top: 50px;
 }
-.informções-gerais p {
+.informções-gerais h3 {
+    display: block;
+}
+.informções-gerais div {
     display: inline-block;
+    margin-bottom: 50px;
     width: 400px;
 }
-img {
-    position: relative;
-    left: 150px;
-    display: inline-block;
-    width: 300px;
-    border-radius: 10px;
+.informções-gerais img {
+    margin-top: 50px;
+    left: 250px;
 }
 footer {
     background-color: var(--cor-1);
