@@ -10,4 +10,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+header {
+    background-color: var(--cor-1);
+    height: 150px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.barra-de-navegação {
+    background-color: var(--cor-2);
+    text-align: center;
+    height: 50px;
+    padding: 15px;
+}
+.barra-de-navegação a {
+    text-decoration: none;
+    color: white;
+    margin: 50px;
 }
