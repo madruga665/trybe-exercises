@@ -17,12 +17,14 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    min-width: 1350px;
 }
 .barra-de-navegação {
     background-color: var(--cor-2);
     text-align: center;
     height: 50px;
     padding: 15px;
+    min-width: 1350px;
 }
 .barra-de-navegação a {
     text-decoration: none;
@@ -34,13 +36,14 @@ article {
     padding: 25px 50px;
     margin-left: 150px;
     margin-right: 150px;
+    min-width: 1050px;
 }
 article h3 {
     color: var(--cor-2);
     margin-top: 20px;
     margin-bottom: 20px;
 }
-p {
+p, li {
     line-height: 25px;
 }
 img {
@@ -48,6 +51,7 @@ img {
     display: inline-block;
     width: 300px;
     border-radius: 10px;
+    margin: 50px 0px;
 }
 .informções-gerais {
     margin-top: 50px;
@@ -57,17 +61,33 @@ img {
 }
 .informções-gerais div {
     display: inline-block;
-    margin-bottom: 50px;
     width: 400px;
+    min-width: 400px;
 }
 .informções-gerais img {
-    margin-top: 50px;
-    left: 250px;
+    width: 350px;
+    bottom: 200px;
+    left: 200px;
 }
+.informções-gerais aside {
+    background-color: var(--cor-5);
+    padding: 50px;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    left: 240px;
+    bottom: 200px;
+}
+.informções-gerais aside h4 {
+    position: relative;
+    bottom: 25px;
+}
+
 footer {
     background-color: var(--cor-1);
     height: 50px;
     text-align: center;
     color: white;
     padding-top: 15px;
+    min-width: 1350px;
 }
