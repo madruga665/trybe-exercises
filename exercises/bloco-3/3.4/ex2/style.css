@@ -30,3 +30,15 @@ header {
     color: white;
     margin: 50px;
 }
+article {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+footer {
+    background-color: var(--cor-1);
+    height: 50px;
+    text-align: center;
+    color: white;
+    padding-top: 15px;
+
+}
