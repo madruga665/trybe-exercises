@@ -37,6 +37,7 @@ article {
     margin-left: 150px;
     margin-right: 150px;
     min-width: 1050px;
+    max-width: 1390px;
 }
 article h3 {
     color: var(--cor-2);
@@ -55,6 +56,7 @@ img {
 }
 .informções-gerais {
     margin-top: 50px;
+    height: 800px;
 }
 .informções-gerais h3 {
     display: block;
@@ -69,7 +71,7 @@ img {
 }
 .informções-gerais img {
     width: 350px;
-    bottom: 200px;
+    bottom: 350px;
     left: 200px;
 }
 .informções-gerais aside {
@@ -78,14 +80,20 @@ img {
     border-radius: 10px;
     display: inline-block;
     position: relative;
-    left: 240px;
-    bottom: 200px;
+    left: 230px;
+    bottom: 300px;
 }
 .informções-gerais aside h4 {
     position: relative;
     bottom: 25px;
 }
-
+.informções-gerais table {
+    border: 1px solid black;
+}
+.informções-gerais td {
+    border: 1px solid black;
+    padding: 5px;
+}
 footer {
     background-color: var(--cor-1);
     height: 50px;
