@@ -4,7 +4,6 @@
     --cor-3: #e9c46a;
     --cor-4: #f4a261;
     --cor-5: #e76f51;
-
 }
 * {
     margin: 0;
@@ -31,8 +30,21 @@ header {
     margin: 50px;
 }
 article {
+    background-color: var(--cor-3);
+    padding: 25px;
     margin-left: 150px;
     margin-right: 150px;
+}
+article h3 {
+    color: var(--cor-1);
+    margin-bottom: 20px;
+}
+.informções-gerais {
+    margin-top: 50px;
+}
+img {
+    width: 300px;
+    border-radius: 10px;
 }
 footer {
     background-color: var(--cor-1);
@@ -40,5 +52,4 @@ footer {
     text-align: center;
     color: white;
     padding-top: 15px;
-
 }
