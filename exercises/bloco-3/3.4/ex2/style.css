@@ -59,6 +59,9 @@ img {
 .informções-gerais h3 {
     display: block;
 }
+.informções-gerais span {
+    font-style: italic;
+}
 .informções-gerais div {
     display: inline-block;
     width: 400px;
