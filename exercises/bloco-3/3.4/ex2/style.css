@@ -43,7 +43,14 @@ article h3 {
 .informções-gerais {
     margin-top: 50px;
 }
+.informções-gerais p {
+    display: inline-block;
+    width: 400px;
+}
 img {
+    position: relative;
+    left: 150px;
+    display: inline-block;
     width: 300px;
     border-radius: 10px;
 }
