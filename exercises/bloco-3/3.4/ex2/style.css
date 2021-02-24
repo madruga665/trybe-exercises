@@ -1,0 +1,114 @@
+:root {
+    --cor-1: #264653;
+    --cor-2: #2a9d8f;
+    --cor-3: #e9c46a;
+    --cor-4: #f4a261;
+    --cor-5: #e76f51;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header {
+    background-color: var(--cor-1);
+    height: 150px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    min-width: 1350px;
+}
+.barra-de-navegação {
+    background-color: var(--cor-2);
+    text-align: center;
+    height: 50px;
+    padding: 15px;
+    min-width: 1350px;
+}
+.barra-de-navegação a {
+    text-decoration: none;
+    color: white;
+    margin: 50px;
+}
+article {
+    background: linear-gradient(to right, #e9c46a, #f4a261);
+    padding: 25px 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    min-width: 1050px;
+    max-width: 1390px;
+}
+article h3 {
+    color: var(--cor-2);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+p, li {
+    line-height: 25px;
+}
+img {
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    border-radius: 10px;
+    margin: 50px 0px;
+}
+h4 {
+    margin: 10px 0;
+    color: var(--cor-1);
+}
+.informções-gerais {
+    margin-top: 50px;
+    height: 800px;
+}
+.informções-gerais h3 {
+    display: block;
+}
+.informções-gerais span {
+    font-style: italic;
+}
+.informções-gerais div {
+    display: inline-block;
+    width: 400px;
+    min-width: 400px;
+}
+.foto-aside {
+    position: relative;
+    display: inline-block;
+    left: 150px;
+    bottom: 100px;
+}
+.informções-gerais aside {
+    background-color: var(--cor-5);
+    padding: 50px;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    left: 30px;
+}
+.informções-gerais a {
+    position: relative;
+    left: 80px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.informções-gerais aside h4 {
+    position: relative;
+    bottom: 25px;
+}
+.informções-gerais table {
+    border: 1px solid black;
+}
+.informções-gerais td {
+    border: 1px solid black;
+    padding: 5px;
+}
+footer {
+    background-color: var(--cor-1);
+    height: 50px;
+    text-align: center;
+    color: white;
+    padding-top: 15px;
+    min-width: 1350px;
+}

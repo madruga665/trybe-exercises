@@ -1,0 +1,19 @@
+img {
+    width: 200px;
+}
+
+.super-mario {
+    position: absolute;
+}
+.goomba{
+    margin-top: 275px;
+}
+.word {
+   position: absolute;
+   bottom: 250px;
+   left: 550px;
+}
+.baloon {
+    margin-bottom: 175px;
+    margin-left: 325px;
+}
