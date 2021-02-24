@@ -1,16 +1,16 @@
 requisitos Soco a 80km/h: Conheça o Stomatopoda .
 
-- 1 cabeçalho -----------------------------------------------------------OK
-- 2 conjunto de links na area de navegação-------------------------------OK
-- 3 Crie um link chamado Página Inicial----------------------------------OK
-- 4 Crie um link chamado Sobre-------------------------------------------OK
-- 5 Crie um link chamado Contato-----------------------------------------OK
-- 6 Crie um artigo que vai conter os fatos interessantes ----------------OK
-- 7 Divida o artigo em seções--------------------------------------------OK
-- 8 Uma primeira seção contendo informações gerais a respeito do animal--OK
-- 9 As outras seções dizem respeito aos fatos interessantes--------------OK
-- 10 Adicione, para cada seção, um subtítulo referente ao fato escolhido-OK
-- 11
+- 1 cabeçalho -------------------------------------------------------------------------------------------------------------OK
+- 2 conjunto de links na area de navegação---------------------------------------------------------------------------------OK
+- 3 Crie um link chamado Página Inicial------------------------------------------------------------------------------------OK
+- 4 Crie um link chamado Sobre---------------------------------------------------------------------------------------------OK
+- 5 Crie um link chamado Contato-------------------------------------------------------------------------------------------OK
+- 6 Crie um artigo que vai conter os fatos interessantes ------------------------------------------------------------------OK
+- 7 Divida o artigo em seções----------------------------------------------------------------------------------------------OK
+- 8 Uma primeira seção contendo informações gerais a respeito do animal----------------------------------------------------OK
+- 9 As outras seções dizem respeito aos fatos interessantes----------------------------------------------------------------OK
+- 10 Adicione, para cada seção, um subtítulo referente ao fato escolhido---------------------------------------------------OK
+- 11 para cada seção, parágrafo(s) descrevendo o fato escolhido. Destaque características impressionantes------------------OK
 - 12
 - 13
 - 14
