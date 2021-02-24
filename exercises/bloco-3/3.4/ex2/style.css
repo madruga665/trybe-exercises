@@ -50,9 +50,13 @@ p, li {
 img {
     position: relative;
     display: inline-block;
-    width: 300px;
+    width: 350px;
     border-radius: 10px;
     margin: 50px 0px;
+}
+h4 {
+    margin: 10px 0;
+    color: var(--cor-1);
 }
 .informções-gerais {
     margin-top: 50px;
@@ -69,10 +73,11 @@ img {
     width: 400px;
     min-width: 400px;
 }
-.informções-gerais img {
-    width: 350px;
-    bottom: 350px;
-    left: 200px;
+.foto-aside {
+    position: relative;
+    display: inline-block;
+    left: 150px;
+    bottom: 300px;
 }
 .informções-gerais aside {
     background-color: var(--cor-5);
@@ -80,8 +85,6 @@ img {
     border-radius: 10px;
     display: inline-block;
     position: relative;
-    left: 230px;
-    bottom: 300px;
 }
 .informções-gerais aside h4 {
     position: relative;
