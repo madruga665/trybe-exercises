@@ -1,9 +1,9 @@
 let a = 10;
 
 if (a <= -1) {
-  console.log(`negative`);
+  console.log(`Negative`);
 } else if (a >= 1) {
-  console.log(`Positivo`);
+  console.log(`Positive`);
 } else {
   console.log(`0`);
 }
