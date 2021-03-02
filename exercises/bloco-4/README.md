@@ -5,7 +5,7 @@
 1. **JavaScript**
 ---
 ## O que vamos aprender?
----
+
 Aqui você vai aprender sobre a linguagem de programação JavaScript .
 Para isso, dividimos o conteúdo em cinco partes:
 
@@ -20,7 +20,7 @@ Para isso, dividimos o conteúdo em cinco partes:
 5. Agora vamos ao projeto Playground Functions
 
 ## Por que isso é importante?
----
+
 
 O JavaScript é a linguagem mais popular do mundo segundo o Stack Overflow e, além de ser utilizada em diversos contextos, faz páginas em toda a web terem comportamentos dinâmicos! Sabe quando a página de notícias atualiza sozinha após algum tempo? Então! Isso é um comportamento dinâmico.
 Por esse motivo, é muito importante ter um bom conhecimento de JS, já que você vai utilizá-lo com frequência no desenvolvimento web.
