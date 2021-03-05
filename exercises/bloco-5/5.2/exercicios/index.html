@@ -69,9 +69,14 @@
   document.body.appendChild(mainContent);
 
   //ex3
-  let centerContent = document.createElement('div')
+  let centerContent = document.createElement('div');
   centerContent.className = 'center-content';
   mainContent.appendChild(centerContent);
+
+  //ex4
+  let tagP = document.createElement('p');
+  tagP.innerHTML = 'Isso ta ficando estranho'
+  centerContent.appendChild(tagP);
     </script>
   </body>
 </html>
