@@ -109,11 +109,19 @@
   for (let index = 0; index < 3; index += 1) {
     let h3s = document.createElement('h3');
     h3s.innerText = 'Estamos aqui meu parceiro!'
+    h3s.className = 'description';
     mainContent.appendChild(h3s);
   }
 
   //ex10
   title.className = 'title';
+
+  //ex11
+ // h3s.className = 'description';
+
+  //ex12
+  let leftContentRemove = document.getElementsByClassName('left-content')[0];
+  mainContent.removeChild(leftContentRemove);
 
     </script>
   </body>
