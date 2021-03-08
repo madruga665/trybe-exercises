@@ -8,7 +8,7 @@ function createDaysOfTheWeek() {
     dayListItem.innerHTML = days;
 
     weekDaysList.appendChild(dayListItem);
-  };
+  }
 };
 
 createDaysOfTheWeek();
@@ -31,10 +31,20 @@ function createDaysOfMonth() {
     } else if (days === 4 | days === 11 | days === 18) {
       dayListItem.className = 'day friday';
     } else if (days === 25) {
-      dayListItem.className = 'day holiday friday'
+      dayListItem.className = 'day holiday friday';
     }
   }
 };
 
 createDaysOfMonth();
+
+function createButton(buttonName) {
+  let buttonsContainer = document.querySelector('.buttons-container');
+  let btnHoliday = document.createElement('button');
+  btnHoliday.id = 'btn-holiday';
+  btnHoliday.innerHTML = buttonName;
+  buttonsContainer.appendChild(btnHoliday);
+};
+
+createButton('Feriados');
 
