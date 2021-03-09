@@ -97,3 +97,23 @@ function ShowSextou() {
 
 let btnFriday = document.querySelector('#btn-friday');
 btnFriday.addEventListener('click', ShowSextou);
+
+// Exercício 06
+function zoomDaysIn() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '30px';
+  })
+};
+
+function zoomDaysOut() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseout', function(event) {
+    event.target.style.fontSize = '20px';
+  })
+};
+
+zoomDaysIn();
+zoomDaysOut();
