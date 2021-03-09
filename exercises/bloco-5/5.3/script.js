@@ -15,6 +15,7 @@ createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
 
+// Exercício 01
 function createDaysOfMonth() {
   const dezDaysList = [28, 29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   const monthDaysList = document.querySelector('#days');
@@ -38,7 +39,9 @@ function createDaysOfMonth() {
 
 createDaysOfMonth();
 
-function createButton(buttonName) {
+// Exercício 02
+
+function createBtnHolidays(buttonName) {
   let buttonsContainer = document.querySelector(".buttons-container");
   let btnHoliday = document.createElement("button");
   btnHoliday.id = "btn-holiday";
@@ -46,8 +49,9 @@ function createButton(buttonName) {
   buttonsContainer.appendChild(btnHoliday);
 }
 
-createButton("Feriados");
+createBtnHolidays("Feriados");
 
+// Exercício 03
 function showHolidays() {
   let holidays = document.querySelectorAll(".holiday");
   let initialColor = "rgb(238, 238, 238)";
@@ -63,6 +67,18 @@ function showHolidays() {
 }
 let btnHoliday = document.querySelector("#btn-holiday");
 btnHoliday.addEventListener("click", showHolidays);
+
+
+// Exercício 04
+function createBtnFriday(buttonName) {
+  let buttonsContainer = document.querySelector(".buttons-container");
+  let btnFriday = document.createElement("button");
+  btnFriday.id = "btn-friday";
+  btnFriday.innerHTML = buttonName;
+  buttonsContainer.appendChild(btnFriday);
+}
+
+createBtnFriday("Sexta-Feira");
 
 
 
