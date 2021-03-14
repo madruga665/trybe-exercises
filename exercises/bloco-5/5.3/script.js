@@ -104,16 +104,105 @@ function zoomDaysIn() {
 
   days.addEventListener('mouseover', function(event) {
     event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
   })
 };
+
+zoomDaysIn();
 
 function zoomDaysOut() {
   let days = document.querySelector('#days');
 
   days.addEventListener('mouseout', function(event) {
     event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '200';
   })
 };
 
-zoomDaysIn();
 zoomDaysOut();
+
+function addTasks(task) {
+  const containerTasks = document.querySelector('.my-tasks');
+  const taskName = document.createElement('span');
+
+  taskName.innerHTML = task;
+  containerTasks.appendChild(taskName);
+}
+
+addTasks('Xablau');
+
+function taskCaption(color) {
+  const containerTasks = document.querySelector('.my-tasks');
+  let newTask = document.createElement('div');
+
+  newTask.className = 'task';
+  newTask.style.background = color;
+  containerTasks.appendChild(newTask);
+}
+
+taskCaption('green');
+
+
+function setTaskClass() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let myTasks = document.querySelector('.task');
+
+  myTasks.addEventListener('click', function(event) {
+    if (selectedTask.length === 0) {
+      event.target.className = 'task selected';
+    } else {
+      event.target.className = 'task';
+    }
+  });
+};
+
+setTaskClass();
+
+function setDayColor() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let days = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+  
+  days.addEventListener('click', function(event){
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      let color = selectedTask[0].style.backgroundColor;
+      event.target.style.color = color;
+    } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+};
+
+setDayColor();
+
+function addNewTask() {
+  let getInputField = document.querySelector('#task-input');
+  let addInputButton = document.querySelector('#btn-add');
+  let getTaskList = document.querySelector('.task-list');
+
+  addInputButton.addEventListener('click', function() {
+    if (getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    } else {
+      alert('Error: Digite ao menos 1 caractere.');
+    }
+  })
+
+  getInputField.addEventListener('keyup', function(event) {
+    if (event.keyCode === 13 && getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    }
+  });
+};
+
+addNewTask();
