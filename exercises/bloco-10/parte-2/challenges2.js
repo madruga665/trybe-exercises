@@ -1,21 +1,13 @@
 // Desafio 10
 function techList(array, yourName) {
   let result = [];
-  let object = {
-    tech: '',
-    name: yourName,
-  };
-  if (array.length === 0) {
-    return 'Vazio!';
-  }
-  array.sort();
-  for (let index = 0; index < array.length; index += 1) {
-    object = {
-      tech: array[index],
-      name: yourName,
-    };
+  let object = { tech: "", name: yourName };
+
+  if (array.length === 0) return "Vazio!";
+  array.sort().forEach((element) => {
+    object = { tech: element, name: yourName };
     result.push(object);
-  }
+  });
   return result;
 }
 
@@ -40,10 +32,13 @@ function repeatedNumbers(array) {
 
 function generatePhoneNumber(phoneNumber) {
   if (phoneNumber.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    return "Array com tamanho incorreto.";
   }
-  if (invalidNumbers(phoneNumber) === true || repeatedNumbers(phoneNumber) === true) {
-    return 'não é possível gerar um número de telefone com esses valores';
+  if (
+    invalidNumbers(phoneNumber) === true ||
+    repeatedNumbers(phoneNumber) === true
+  ) {
+    return "não é possível gerar um número de telefone com esses valores";
   }
   return `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
 }
@@ -57,14 +52,21 @@ function sumCheck(lineA, lineB, lineC) {
 }
 
 function diferenceCheck(lineA, lineB, lineC) {
-  if (Math.abs(lineA - lineB) > lineC || Math.abs(lineA - lineC) > lineB || Math.abs(lineB - lineC) > lineA) {
+  if (
+    Math.abs(lineA - lineB) > lineC ||
+    Math.abs(lineA - lineC) > lineB ||
+    Math.abs(lineB - lineC) > lineA
+  ) {
     return false;
   }
   return true;
 }
 
 function triangleCheck(lineA, lineB, lineC) {
-  if (sumCheck(lineA, lineB, lineC) === false && diferenceCheck(lineA, lineB, lineC) === false) {
+  if (
+    sumCheck(lineA, lineB, lineC) === false &&
+    diferenceCheck(lineA, lineB, lineC) === false
+  ) {
     return false;
   }
   return true;
