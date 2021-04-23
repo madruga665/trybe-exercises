@@ -1,26 +1,4 @@
-const Animals = [
-  { name: 'Dorminhoco', age: 1, type: 'Dog' },
-  { name: 'Soneca', age: 2, type: 'Dog' },
-  { name: 'Preguiça', age: 5, type: 'Cat' },
-];
-
-const findAnimalByName = (name) => (
-  new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const animal = Animals.find((animal) => animal.name === name);
-      if (animal) {
-        return resolve(animal);
-      };
-      const messageError = 'Nenhum animal com esse nome!';
-      return reject(messageError);
-    }, 100);
-  })
-);
-
-const getAnimal = (name) => {
-  return findAnimalByName(name)
-    .then(animal => animal);
-};
+const getAnimal = require("./ex6");
 
 describe('Testando promise - findAnimalByName', () => {
   describe('Quando existe o animal com o nome procurado', () => {
