@@ -1,5 +1,23 @@
 .pokedex {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  height: 80px;
+  margin-top: 25px;
+  background-color: #008000;
+}
+
+button:disabled {
+  background-color: gray;
+  color: black;
+}
+
+.pokemons-type button {
+  width: 80px;
+  height: 50px;
+  margin-right: 25px;
+  background-color: #ffcb05;
 }

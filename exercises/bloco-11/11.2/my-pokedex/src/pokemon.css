@@ -1,13 +1,19 @@
 .pokemon {
   display: flex;
   justify-content: space-between;
-  width: 250px;
-  height: 150px;
+  width: 350px;
+  height: 200px;
   border: 1px solid black;
   border-radius: 20px;
+  margin-top: 50px;
   margin-bottom: 25px;
-  margin-right: 25px;
   text-align: left;
-  padding: 10px;
+  padding: 25px;
   box-shadow: 5px 5px 15px 5px #888686;
+}
+
+img {
+  margin-top: 25px;
+  margin-right: 50px;
+  width: 70px;
 }
