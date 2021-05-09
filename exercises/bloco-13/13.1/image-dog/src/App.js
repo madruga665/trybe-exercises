@@ -8,11 +8,22 @@ class App extends React.Component {
       data: "",
     };
   }
+
   fetchDog = async () => {
     const response = await fetch("https://dog.ceo/api/breeds/image/random");
     const data = await response.json();
     this.setState({ data: data });
   };
+
+  verifyBrand = ({ data: { message } }) =>
+    message.includes("terrier") ? true : false;
+
+  shouldComponentUpdate(_nextProps, nextState) {
+    if (this.verifyBrand(nextState)) {
+      return false;
+    }
+    return true;
+  }
 
   componentDidMount() {
     this.fetchDog();

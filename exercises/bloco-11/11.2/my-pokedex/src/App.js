@@ -1,12 +1,15 @@
 import "./App.css";
-import Pokedex from "./Pokedex";
+import Pokedex from "./components/Pokedex";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div className="pokedex-container">
-      <h1>Pokedex</h1>
-      <Pokedex />
-    </div>
+    <BrowserRouter>
+      <div className="pokedex-container">
+        <h1>Pokedex</h1>
+        <Pokedex />
+      </div>
+    </BrowserRouter>
   );
 }
 
