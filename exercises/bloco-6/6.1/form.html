@@ -8,6 +8,11 @@
   <title>Form</title>
 </head>
 <body>
+  <header class="form-header">
+    <h1>Formulário para cadastro de currículo</h1>
+    <p>Preencha os campos abaixo</p>
+  </header>
+
   <form method="get">
     <div class='form-row'>
       <fieldset>
@@ -55,6 +60,32 @@
             <input type="radio" name="type" id="apartament" required>Apartamento
           </label>
         </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="line-content">
+          <label for="cv-resume">Resumo do currículo: </label>
+          <textarea id="cv-resume" name="cv-resume" maxlength="1000" cols="100" rows="20" required></textarea>
+        </div>
+
+        <div class="line-content">
+          <label for="position">Cargo: </label>
+          <input type="text" name="position" id="position" maxlength="40" required >
+        </div>
+
+        <div class="line-content">
+          <label for="description">Descrição do cargo: </label>
+          <input type="text" id="description" name="description" required>
+        </div>
+
+        <div class="line-content">
+          <label for="start-date">Data de início: </label>
+          <input type="text" class="input-data" name="start-date" value="" required>
+        </div>
+
+        <button class="submit-button" type="button">Enviar</button>
+        <button class="clear-button" type="button">Limpar</button>
+
       </fieldset>
     </div>
   </form>
