@@ -22,7 +22,6 @@ class MoreDetails extends React.Component {
     const { match: { params: { id } } } = this.props;
     const data = this.findPokemon(id)
     this.setState({pokemon: data})
-    console.log(data)
   };
   render() {
     const { pokemon } = this.state;
