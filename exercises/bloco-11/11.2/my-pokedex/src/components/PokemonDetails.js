@@ -2,10 +2,6 @@ import React from "react";
 import './styles/pokemonDetails.css'
 
 class PokemonDetails extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { pokemon } = this.props;
     const { name, type, summary, image, foundAt } = pokemon;
