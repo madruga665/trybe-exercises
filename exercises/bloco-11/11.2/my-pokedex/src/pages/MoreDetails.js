@@ -3,8 +3,8 @@ import PokemonDetails from '../components/PokemonDetails';
 import pokemons from "../helpers/data";
 
 class MoreDetails extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       pokemon: {}
     }
@@ -24,6 +24,9 @@ class MoreDetails extends React.Component {
     this.setState({pokemon: data})
   };
   render() {
+    if (Object.keys(this.state.pokemon).length === 0 ) {
+      return null;
+    }
     const { pokemon } = this.state;
     return (
       <div>

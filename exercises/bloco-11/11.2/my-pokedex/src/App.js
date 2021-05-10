@@ -15,8 +15,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route
             path="/pokemon/:id"
-            render={(routProps) => routProps}
-            component={MoreDetails}
+            render={(routProps) => <MoreDetails {...routProps}/>}
           />
         </Switch>
       </BrowserRouter>

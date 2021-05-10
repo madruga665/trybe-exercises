@@ -1,11 +1,15 @@
 import React from "react";
+import './styles/pokemonDetails.css'
 
 class PokemonDetails extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const { pokemon } = this.props;
     const { name, type, summary, image, foundAt } = pokemon;
 
-    // console.log(pokemon);
     return (
       <section className="pokedex">
         <div className="pokemon">
@@ -18,19 +22,20 @@ class PokemonDetails extends React.Component {
           </div>
         </div>
         <div>
-          <h2>Summary</h2>
+          <h2>Summary:</h2>
           <h3>{summary}</h3>
         </div>
-        <div>
-          <h2>Locations</h2>
-          {/* {foundAt.map((item) => {
+        <div className="locations-container">
+          <h2>Locations:</h2>
+          {foundAt.map((item, index) => {
             return (
-              <>
-                <span >{item.location}</span>
-                <img src={item.map} alt="foto do mapa" />
-              </>
+              <div key={index}>
+                <span>{item.location}</span> <br/>
+                <img className="image-map" src={item.map} alt="foto do mapa" />
+                <hr/>
+              </div>
             );
-          })} */}
+          })}
         </div>
       </section>
     );

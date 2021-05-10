@@ -1,0 +1,14 @@
+.locations-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.image-map {
+  width: 300px;
+  margin-right: 80px;
+  margin-bottom: 25px;
+}

@@ -7,7 +7,7 @@ class Navigation extends React.Component {
     return (
       <nav className="navigation">
         <Link to="/">Home</Link>
-        <Link>Favorite Pokemons</Link>
+        <Link to="/favorite">Favorite Pokemons</Link>
         <Link to="/about">About</Link>
       </nav>
     );
