@@ -23,14 +23,14 @@ class PokemonDetails extends React.Component {
         </div>
         <div>
           <h2>Locations</h2>
-          {foundAt.map((item) => {
+          {/* {foundAt.map((item) => {
             return (
               <>
                 <span >{item.location}</span>
                 <img src={item.map} alt="foto do mapa" />
               </>
             );
-          })}
+          })} */}
         </div>
       </section>
     );

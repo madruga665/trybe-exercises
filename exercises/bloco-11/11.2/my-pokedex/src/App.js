@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import MoreDetails from "./pages/MoreDetails";
 import Navigation from "./components/Navgation";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Navigation />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
           <Route
             path="/pokemon/:id"
             render={(routProps) => routProps}

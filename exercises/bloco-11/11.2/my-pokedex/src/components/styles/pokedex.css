@@ -3,6 +3,10 @@
   flex-direction: column;
   align-items: center;
 }
+.pokedex > img {
+  width: 200px;
+  margin-right: 100px;
+}
 
 .pokedex-container {
   display: flex;

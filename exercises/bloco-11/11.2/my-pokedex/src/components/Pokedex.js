@@ -2,6 +2,7 @@ import React from "react";
 import pokemons from "../helpers/data";
 import "./styles/pokedex.css";
 import Pokemon from "./Pokemon";
+import logo from "../assets/pokedex_logo.webp"
 
 class Pokedex extends React.Component {
   constructor() {
@@ -53,7 +54,7 @@ class Pokedex extends React.Component {
     return (
       <div className="pokedex-container">
         <div className="pokedex">
-        <h1>Pokedex</h1>
+        <img src={logo} alt="logo pokedex" width={500}/>
           <Pokemon pokemon={this.state.pokemons[this.state.index]} />
           <div className="pokemons-type">
             <button onClick={this.allTypes}>All</button>
