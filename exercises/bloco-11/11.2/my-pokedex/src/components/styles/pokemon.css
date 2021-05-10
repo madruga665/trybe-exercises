@@ -1,6 +1,7 @@
 .pokemon {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 350px;
   height: 200px;
   border: 1px solid black;
@@ -8,12 +9,12 @@
   margin-top: 50px;
   margin-bottom: 25px;
   text-align: left;
-  padding: 25px;
+  padding: 25px 50px 25px 25px;
   box-shadow: 5px 5px 15px 5px #888686;
 }
 
 img {
   margin-top: 25px;
-  margin-right: 50px;
+  margin-left: 100px;
   width: 70px;
 }
