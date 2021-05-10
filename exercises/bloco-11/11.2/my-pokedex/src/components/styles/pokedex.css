@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+.pokedex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 button {
   height: 80px;
   margin-top: 25px;

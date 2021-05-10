@@ -52,8 +52,8 @@ class Pokedex extends React.Component {
   render() {
     return (
       <div className="pokedex-container">
-        <h1>Pokedex</h1>
         <div className="pokedex">
+        <h1>Pokedex</h1>
           <Pokemon pokemon={this.state.pokemons[this.state.index]} />
           <div className="pokemons-type">
             <button onClick={this.allTypes}>All</button>
