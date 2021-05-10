@@ -25,11 +25,8 @@ class MoreDetails extends React.Component {
   };
   render() {
     const { pokemon } = this.state;
-    const { id } = pokemon;
     return (
-      <div className="pokedex-container">
-        <h1>oi eu sou o more datails{id}</h1>
-        <span>nois que voa dog!</span>
+      <div>
         <PokemonDetails pokemon={ pokemon } />
       </div>
     );

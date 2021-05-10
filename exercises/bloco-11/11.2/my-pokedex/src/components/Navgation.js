@@ -7,8 +7,8 @@ render() {
   return(
     <nav className="navigation" >
       <Link to="/">Home</Link>
-      <Link>About</Link>
       <Link>Favorite Pokemons</Link>
+      <Link>About</Link>
     </nav>
   )
 }

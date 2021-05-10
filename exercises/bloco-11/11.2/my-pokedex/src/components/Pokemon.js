@@ -17,7 +17,7 @@ class Pokemon extends React.Component {
         <div>
           <img src={image} alt="foto do pokemon" />
         </div>
-        <Link to={`/pokemon/${id}`} >More Datails</Link>
+        <Link  to={`/pokemon/${id}`} >More Datails</Link>
       </div>
     );
   }

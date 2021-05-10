@@ -1,7 +1,6 @@
 import React from "react";
 
 class PokemonDetails extends React.Component {
-
   render() {
     const { pokemon } = this.props;
     const { name, type, summary, image, foundAt } = pokemon;
@@ -10,8 +9,10 @@ class PokemonDetails extends React.Component {
     return (
       <section className="pokedex">
         <div className="pokemon">
-          <p>Nome: {name}</p>
-          <p>Type: {type}</p>
+          <div>
+            <p>Nome: {name}</p>
+            <p>Type: {type}</p>
+          </div>
           <div>
             <img src={image} alt="foto do pokemon" />
           </div>
@@ -20,7 +21,8 @@ class PokemonDetails extends React.Component {
           <h2>Summary</h2>
           <h3>{summary}</h3>
         </div>
-        {/* <div>
+        <div>
+          <h2>Locations</h2>
           {foundAt.map((item) => {
             return (
               <>
@@ -29,7 +31,7 @@ class PokemonDetails extends React.Component {
               </>
             );
           })}
-        </div> */}
+        </div>
       </section>
     );
   }

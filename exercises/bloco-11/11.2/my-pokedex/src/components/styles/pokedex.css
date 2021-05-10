@@ -11,19 +11,29 @@
 }
 
 button {
+  cursor: pointer;
   height: 80px;
   margin-top: 25px;
   background-color: #008000;
 }
 
 button:disabled {
+  cursor: not-allowed;
   background-color: gray;
   color: black;
 }
 
 .pokemons-type button {
+  cursor: pointer;
   width: 80px;
   height: 50px;
   margin-right: 25px;
-  background-color: #ffcb05;
+  background-color: #fad233;
+  border: 1px solid #fceeb7;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 25px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 10px 9px 10px -3px rgba(0, 0, 0, 0.56);
 }
