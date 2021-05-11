@@ -1,14 +1,15 @@
 import React from "react";
 import pokedexKanto from "../assets/pokedex_kanto.png";
+import './styles/About.css'
 
 class About extends React.Component {
   render() {
     return (
-      <div className="about">
+      <section className="about-container">
         <img src={pokedexKanto} alt="pokedex da região de kanto" />
-        <h3>Pokedex criada por:</h3>
+        <h1>pokedex created by:</h1>
         <span>madruga665</span>
-      </div>
+      </section>
     );
   }
 }
