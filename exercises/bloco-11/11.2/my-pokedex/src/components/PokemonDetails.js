@@ -1,10 +1,22 @@
 import React from "react";
-import './styles/pokemonDetails.css'
+import "./styles/pokemonDetails.css";
 
 class PokemonDetails extends React.Component {
+  locations = (foundAt) => {
+    return foundAt.map((item, index) => {
+      return (
+        <div key={index}>
+          <span>{item.location}</span> <br />
+          <img className="image-map" src={item.map} alt="foto do mapa" />
+          <hr />
+        </div>
+      );
+    });
+  };
+
   render() {
     const { pokemon } = this.props;
-    const { name, type, summary, image, foundAt, averageWeight } = pokemon;
+    const { name, type, summary, image, averageWeight, foundAt } = pokemon;
 
     return (
       <section className="pokedex">
@@ -12,7 +24,10 @@ class PokemonDetails extends React.Component {
           <div>
             <p>Name: {name}</p>
             <p>Type: {type}</p>
-            <p>Average weight: {averageWeight.value} {averageWeight.measurementUnit}</p>
+            <p>
+              Average weight: {averageWeight.value}{" "}
+              {averageWeight.measurementUnit}
+            </p>
           </div>
           <div>
             <img src={image} alt="foto do pokemon" />
@@ -24,15 +39,7 @@ class PokemonDetails extends React.Component {
         </div>
         <div className="locations-container">
           <h2>Locations:</h2>
-          {foundAt.map((item, index) => {
-            return (
-              <div key={index}>
-                <span>{item.location}</span> <br/>
-                <img className="image-map" src={item.map} alt="foto do mapa" />
-                <hr/>
-              </div>
-            );
-          })}
+          {this.locations(foundAt)}
         </div>
       </section>
     );
