@@ -14,4 +14,5 @@ const imc = (altura, peso) => {
   if (result > 40) return `${result} ----- Obesidade graus III e IV`;
 };
 
+console.log("===== SEU IMC É =====")
 console.log(imc(altura, peso));
