@@ -1,0 +1,294 @@
+// Operador $match
+
+db.articles.insertMany([
+{ _id: ObjectId("512bc95fe835e68f199c8686"), author: "dave", score: 80, views: 100 },
+{ _id: ObjectId("512bc962e835e68f199c8687"), author: "dave", score: 85, views: 521 },
+{ _id: ObjectId("55f5a192d4bede9ac365b257"), author: "ahn", score: 60, views: 1000 },
+{ _id: ObjectId("55f5a192d4bede9ac365b258"), author: "li", score: 55, views: 5000 },
+{ _id: ObjectId("55f5a1d3d4bede9ac365b259"), author: "annT", score: 60, views: 50 },
+{ _id: ObjectId("55f5a1d3d4bede9ac365b25a"), author: "li", score: 94, views: 999 },
+{ _id: ObjectId("55f5a1d3d4bede9ac365b25b"), author: "ty", score: 95, views: 1000 }
+])
+
+db.articles.find();
+
+db.articles.aggregate(
+  [{ $match : { author : "dave" } }]
+);
+
+db.articles.aggregate(
+  [
+    {
+      $match: {
+        $or: [
+          { score: { $gt: 70, $lt: 90 } },
+          { views: { $gte: 1000 } }
+        ]
+      }
+    }
+  ]
+);
+
+// Operador $limit
+
+db.articles.aggregate(
+  [
+    { $limit : 5 }
+  ]
+);
+
+// Operador $project
+
+db.books.insertOne(
+  {
+    _id: 1,
+    title: "A Fundação",
+    isbn: "0001122223334",
+    author: { last: "Asimov", first: "Isaac" },
+    copies: 5
+  }
+);
+
+db.books.find();
+
+// Exemplo 1: Incluindo campos específicos
+
+db.books.aggregate(
+  [
+    {
+      $project : {
+        title : 1,
+        author : 1
+      }
+    }
+  ]
+);
+
+// Exemplo 2: Excluindo o campo _id
+
+db.books.aggregate(
+  [
+    {
+      $project : {
+        _id: 0,
+        title : 1,
+        author : 1
+      }
+    }
+  ]
+);
+
+// Exemplo 3: Excluindo outros campos
+
+db.books.aggregate([
+  {
+    $project : {
+      copies: 0
+    }
+  }
+]);
+
+// Exemplo 4: Excluindo campos em subdocumentos
+
+db.books.aggregate([
+  {
+    $project : {
+      "author.first": 0,
+      copies: 0
+    }
+  }
+]);
+
+// Exemplo 5: Incluindo campos calculados
+
+db.books.aggregate([
+  {
+    $project: {
+      title: 1,
+      isbn: {
+        prefix: { $substr: ["$isbn", 0, 3] },
+        group: { $substr: ["$isbn", 3, 2] },
+        publisher: { $substr: ["$isbn", 5, 4] },
+        title: { $substr: ["$isbn", 9, 3] },
+        checkDigit: { $substr: ["$isbn", 12, 1] }
+      },
+      lastName: "$author.last",
+      copiesSold: "$copies"
+    }
+  }
+]);
+
+// Operador $group
+
+db.sales.insertMany([
+{
+  _id: 1,
+  item: "Código Limpo",
+  price: NumberDecimal("10"),
+  quantity: NumberInt("2"),
+  date: ISODate("2014-03-01T08:00:00Z")
+},
+{
+  _id: 2,
+  item: "O Homem e Seus Símbolos",
+  price: NumberDecimal("20"),
+  quantity: NumberInt("1"),
+  date: ISODate("2014-03-01T09:00:00Z")
+},
+{
+  _id: 3,
+  item: "Comunicação Não-Violenta",
+  price: NumberDecimal("5"),
+  quantity: NumberInt( "10"),
+  date: ISODate("2014-03-15T09:00:00Z")
+},
+{
+  _id: 4,
+  item: "Comunicação Não-Violenta",
+  price: NumberDecimal("5"),
+  quantity:  NumberInt("20"),
+  date: ISODate("2014-04-04T11:21:39.736Z")
+},
+{
+  _id: 5,
+  item: "Código Limpo",
+  price: NumberDecimal("10"),
+  quantity: NumberInt("10"),
+  date: ISODate("2014-04-04T21:23:13.331Z")
+},
+{
+  _id: 6,
+  item:"A Coragem de Ser Imperfeito",
+  price: NumberDecimal("7.5"),
+  quantity: NumberInt("5" ),
+  date: ISODate("2015-06-04T05:08:13Z")
+},
+{
+  _id: 7,
+  item: "A Coragem de Ser Imperfeito",
+  price: NumberDecimal("7.5"),
+  quantity: NumberInt("10"),
+  date: ISODate("2015-09-10T08:43:00Z")
+},
+{
+  _id: 8,
+  item: "Código Limpo",
+  price: NumberDecimal("10"),
+  quantity: NumberInt("5" ),
+  date: ISODate("2016-02-06T20:20:13Z")
+}
+]);
+
+db.sales.find();
+
+// Exemplo 1: Contando o número de documentos
+
+db.sales.aggregate([
+  {
+    $group: {
+      _id: null,
+      count: { $sum: 1 }
+    }
+  }
+]);
+
+db.sales.count();
+
+// Exemplo 2: Retornando valores distintos
+
+db.sales.aggregate([
+  {
+    $group : {
+      _id : "$item",
+      count: { $sum: 1}
+    }
+  }
+]);
+
+// Exemplo 3: Somando valores
+
+db.sales.aggregate([
+  {
+    $group : {
+      _id : "$item",
+      totalSaleAmount: {
+        $sum: {
+          $multiply: ["$price", "$quantity"]
+        }
+      }
+    }
+  }
+]);
+
+// Exemplo 4: Having (do Mysql), combinando estágios no aggregate
+
+db.sales.aggregate([
+  // Primeiro Estágio
+  {
+    $group: {
+      _id : "$item",
+      totalSaleAmount: {
+        $sum: {
+          $multiply: ["$price", "$quantity"]
+        }
+      }
+    }
+  },
+  // Segundo Estágio
+  {
+    $match: { "totalSaleAmount": { $gte: 100 } }
+  }
+]);
+
+// Exemplo 5: Agrupando por null
+
+db.sales.aggregate([
+  {
+    $group : {
+      _id : null,
+      totalSaleAmount: {
+        $sum: { $multiply: ["$price", "$quantity"] }
+      },
+      averageQuantity: { $avg: "$quantity" },
+      count: { $sum: 1 }
+    }
+  }
+]);
+
+// Operador $unwind
+
+db.inventory.insertOne({ _id: 7, item: "ABC1", sizes: ["S", "M", "L"] });
+
+db.inventory.aggregate([{ $unwind : "$sizes" }]);
+
+// Operador $lookup
+
+// orders
+
+db.orders.insertMany([
+{ _id: 1, item: "almonds", price: 12, quantity: 2 },
+{ _id: 2, item: "pecans", price: 20, quantity: 1 },
+{ _id: 3 }
+]);
+
+// inventory
+
+db.inventory.insertMany([
+{ _id: 1, sku: "almonds", description: "product 1", instock: 120 },
+{ _id: 2, sku: "bread", description: "product 2", instock: 80 },
+{ _id: 3, sku: "cashews", description: "product 3", instock: 60 },
+{ _id: 4, sku: "pecans", description: "product 4", instock: 70 },
+{ _id: 5, sku: null, description: "Incomplete" },
+{ _id: 6 }
+]);
+
+db.orders.aggregate([
+  {
+    $lookup: {
+      from: "inventory",
+      localField: "item",
+      foreignField: "sku",
+      as: "inventory_docs"
+    }
+  }
+]);
