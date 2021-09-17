@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 
 // 2 Dizer ao Express que, quando uma requisição com método GET for recebida no caminho /hello , a função handleHelloWorldRequest deve ser chamada;
-app.get('/', handleHelloWorldRequest);
+app.get('/hello', handleHelloWorldRequest);
 
 // 3 Pedir ao Express que crie um servidor HTTP e escute por requisições na porta 3001;
 app.listen(3001, () => {
