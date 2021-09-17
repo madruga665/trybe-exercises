@@ -7,7 +7,7 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
-// Authors
+// Authors --------------------------------------------
 app.get("/authors", async (_req, res) => {
   const authors = await Author.getAll();
   res.status(200).json(authors);
@@ -29,7 +29,7 @@ app.post('/authors', async (req, res) => {
   res.status(201).json({ message: 'Autor criado com sucesso! '});
 });
 
-// Books
+// Books -------------------------------------------- 
 app.get("/books", async (req, res) => {
   const { author_id } = req.query;
   const books = author_id ? await Book.getByAuthorId(author_id) : await Book.getAll();
